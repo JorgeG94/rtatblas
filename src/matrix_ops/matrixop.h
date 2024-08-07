@@ -43,6 +43,7 @@ inline gpu::blasStatus_t gpuTgemm(gpu::blasHandle_t handle,
   } else {
     static_assert(!sizeof(T), "GEMM is only double and float");
   }
+  __builtin_unreachable();
 }
 
 template<typename T>
@@ -73,6 +74,7 @@ inline gpu::blasStatus_t gpuTsyrk(gpu::blasHandle_t handle,
   } else {
     static_assert(!sizeof(T), "SYRK is only double and float");
   }
+  __builtin_unreachable();
 }
 
 template<typename T>
@@ -106,6 +108,7 @@ inline gpu::blasStatus_t gpuTtrsm(gpu::blasHandle_t handle,
   } else {
     static_assert(!sizeof(T), "TRSM is only double and float");
   }
+  __builtin_unreachable();
 }
 
 template<typename T>
@@ -137,6 +140,7 @@ inline gpu::blasStatus_t gpuTgeam(gpu::blasHandle_t handle,
   } else {
     static_assert(!sizeof(T), "GEAM is only double and float");
   }
+  __builtin_unreachable();
 }
 
 template<typename T>

@@ -31,6 +31,7 @@ public:
       case TRANS:
         return BLAS_Op(NOTRANS);
     }
+    __builtin_unreachable();
   }
 
   BLAS_Op(_BLAS_Op op) : op(op) {}
@@ -77,6 +78,7 @@ public:
       case PAD:
         return Pad_Op(NOPAD);
     }
+    __builtin_unreachable();
   }
 
   Pad_Op(_Pad_Op op) : op(op) {}
